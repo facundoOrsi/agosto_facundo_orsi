@@ -31,20 +31,20 @@ public class testngSalesforce {
     }
 
     @Test (enabled = false)
-    public void RememberMeIsSelected(){
+    public void rememberMeIsSelected(){
         driver.findElement(By.xpath("//input[@type='checkbox']")).click();
         Assert.assertTrue(driver.findElement(By.xpath("//input[@type='checkbox']")).isSelected());
     }
 
     @Test (priority = 2)
-    public void FooterIsValid(){
+    public void footerIsValid(){
         WebElement e = driver.findElement(By.id("footer"));
         Assert.assertTrue(e.getText().contains("All rights reserved"));
     }
 
     /* Ejercicio GIT */
     @Test
-    public void LoginFailureTest(){
+    public void loginFailureTest(){
         WebElement logo = driver.findElement(By.id("logo"));
         Assert.assertTrue(logo.isDisplayed());
         driver.findElement(By.id("username")).sendKeys("test@test.com");
@@ -53,7 +53,6 @@ public class testngSalesforce {
 
         WebElement e = driver.findElement(By.id("error"));
         System.out.println(e.getText());
-
     }
 
     @AfterMethod
